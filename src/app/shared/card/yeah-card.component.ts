@@ -25,15 +25,18 @@ export class YeahCardComponent {
     this.editButtonText = "Edit";
   }
 
-  toggleDeleteConfirmation() {
+  toggleDeleteConfirmation(): void {
     this.showDeleteConfirmation = !this.showDeleteConfirmation;
   }
 
-  deleteUrl() {
-    this.deleteButtonClicked.emit(this.url);
+  cancelEdit(): void {
+    if (this.editUrlMode) {
+      this.editUrlMode = false;
+      this.editButtonText = "Edit";
+    }
   }
 
-  editUrl() {
+  editUrl(): void {
     if (this.editButtonText === "Edit") {
       this.editUrlMode = !this.editUrlMode;
       this.editButtonText = "Save";
@@ -42,5 +45,9 @@ export class YeahCardComponent {
       this.editUrlMode = !this.editUrlMode;
       this.editButtonText = "Edit";
     }
+  }
+
+  deleteUrl(): void {
+    this.deleteButtonClicked.emit(this.url);
   }
 }

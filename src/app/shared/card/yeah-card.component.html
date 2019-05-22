@@ -15,7 +15,8 @@
 		</div>
 		<div class="card-separator"></div>
 		<div class="card-actions">
-			<yeah-button (click)="toggleDeleteConfirmation()">Delete</yeah-button>
+			<yeah-button *ngIf="!editUrlMode" (click)="toggleDeleteConfirmation()">Delete</yeah-button>
+			<yeah-button *ngIf="editUrlMode" (click)="cancelEdit()">Cancel</yeah-button>
 			<yeah-button (click)="editUrl()">{{ editButtonText }}</yeah-button>
 		</div>
 	</div>
@@ -23,7 +24,7 @@
         'confirm-delete_container': true,
         'active': showDeleteConfirmation
       }">
-		<div>Are you sure to delete this URL?</div>
+		<div class="delete-confirmation_text">Are you sure to delete this URL?</div>
 		<div class="card-actions delete-actions">
 			<yeah-button (click)="toggleDeleteConfirmation()">Cancel</yeah-button>
 			<yeah-button (click)="deleteUrl()">Delete</yeah-button>

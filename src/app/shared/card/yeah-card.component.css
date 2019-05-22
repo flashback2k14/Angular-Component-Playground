@@ -19,7 +19,7 @@
 .active {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
   text-align: center;
 }
 
@@ -96,6 +96,10 @@
   display: flex;
   justify-content: space-between;
   margin-top: 6px;
+}
+
+.delete-confirmation_text {
+  margin-top: 76px;
 }
 
 .delete-actions {
