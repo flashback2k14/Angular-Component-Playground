@@ -14,6 +14,7 @@ import { ControlValueAccessor, NG_VALUE_ACCESSOR } from "@angular/forms";
   ]
 })
 export class YeahInputComponent implements ControlValueAccessor {
+  @Input() inputId: string;
   @Input() inputTabIndex: string;
   @Input() inputType: string;
   @Input() placeholderText: string;
@@ -21,6 +22,7 @@ export class YeahInputComponent implements ControlValueAccessor {
   inputValue: string;
 
   constructor() {
+    this.inputId = "txt";
     this.inputTabIndex = "1";
     this.inputType = "text";
     this.placeholderText = "Enter here...";

@@ -7,6 +7,7 @@ import { Component } from "@angular/core";
       <div style="display:flex; justify-content: center;">
         <form #form="ngForm" (ngSubmit)="submit(form.value)">
           <yeah-input
+            inputId="txtUsername"
             inputTabIndex="1"
             inputType="text"
             placeholderText="Enter your username..."
@@ -15,6 +16,7 @@ import { Component } from "@angular/core";
             ngModel
           ></yeah-input>
           <yeah-input
+            inputId="txtPassword"
             inputTabIndex="2"
             inputType="password"
             placeholderText="Enter your password..."
@@ -22,6 +24,15 @@ import { Component } from "@angular/core";
             name="password"
             ngModel
           ></yeah-input>
+          <yeah-textarea
+            inputId="txtarea"
+            inputTabIndex="3"
+            placeholderText="Enter your multiline..."
+            labelText="Multiline"
+            rowCount="7"
+            name="area"
+            ngModel
+          ></yeah-textarea>
           <yeah-button type="submit">Login</yeah-button>
         </form>
       </div>
@@ -259,19 +270,19 @@ export class AppComponent {
     }
   ];
 
-  submit(value: any): void {
-    console.log(value);
-  }
-
-  handleTagItemClicked($event): void {
+  submit($event: any): void {
     alert(JSON.stringify($event, null, 2));
   }
 
-  handleDeleteButtonClicked($event): void {
+  handleTagItemClicked($event: any): void {
     alert(JSON.stringify($event, null, 2));
   }
 
-  handleEditButtonClicked($event): void {
+  handleDeleteButtonClicked($event: any): void {
+    alert(JSON.stringify($event, null, 2));
+  }
+
+  handleEditButtonClicked($event: any): void {
     alert(JSON.stringify($event, null, 2));
   }
 }

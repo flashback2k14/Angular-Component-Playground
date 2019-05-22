@@ -14,6 +14,7 @@ import { ControlValueAccessor, NG_VALUE_ACCESSOR } from "@angular/forms";
   ]
 })
 export class YeahTextareaComponent implements ControlValueAccessor {
+  @Input() inputId: string;
   @Input() inputTabIndex: string;
   @Input() placeholderText: string;
   @Input() rowCount: string;
@@ -21,6 +22,7 @@ export class YeahTextareaComponent implements ControlValueAccessor {
   @Input() inputValue: string;
 
   constructor() {
+    this.inputId = "txt";
     this.inputTabIndex = "1";
     this.placeholderText = "Enter here...";
     this.rowCount = "4";

@@ -22,10 +22,10 @@ button::before {
   content: "";
   position: absolute;
   z-index: -1;
-  top: -2px;
+  top: -4px;
   bottom: -1px;
-  left: 0;
-  right: 0;
+  left: -2px;
+  right: -2px;
   background-color: #442244;
   transform-origin: bottom center;
   transform: scaleY(0.05);
@@ -36,4 +36,5 @@ button:hover::before,
 button:focus::before {
   transform: scaleY(1);
   background-color: hsla(341, 97%, 59%, 0.75);
+  border-radius: 4px;
 }

@@ -1,19 +1,20 @@
 <div class="card-overlay">
 	<div class="card">
 		<div>
-			<div class="card-separator"></div>
+			<!-- <div class="card-separator"></div>
 			<div class="card-title">URL</div>
-			<div class="card-separator"></div>
+			<div class="card-separator"></div> -->
 			<div class="card-url">
 				<a *ngIf="!editUrlMode" class="card-url_text" href="{{ url.link }}" target="_blank">{{ url.link }}</a>
-				<yeah-textarea *ngIf="editUrlMode" inputTabIndex="1" placeholderText="Edit your URL..." rowCount="5" labelText="URL"
-				 inputValue="{{ url.link }}" name="url" ngModel></yeah-textarea>
+				<yeah-textarea *ngIf="editUrlMode" inputId="txtEditUrl" inputTabIndex="1" placeholderText="Edit your URL..."
+				 labelText="URL" inputValue="{{ url.link }}" name="edit-url" ngModel>
+				</yeah-textarea>
 			</div>
 		</div>
 		<div>
-			<div class="card-separator"></div>
+			<!-- <div class="card-separator"></div>
 			<div class="card-title">Keywords</div>
-			<div class="card-separator"></div>
+			<div class="card-separator"></div> -->
 			<ul class="card-keywords_list">
 				<li class="card-keywords_item" *ngFor="let tag of url.tags" (click)="tagItemClicked.emit(tag)">{{ tag.name }}</li>
 			</ul>
