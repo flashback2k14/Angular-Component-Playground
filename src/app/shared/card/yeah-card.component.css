@@ -39,11 +39,6 @@
   box-shadow: 0 20px 30px -3px #12102e, 0 8px 12px -2px #12102e;
 }
 
-.card-title {
-  padding: 8px 0 4px 0;
-  font-size: large;
-}
-
 .card-url {
   padding: 6px 0;
 }
@@ -75,12 +70,6 @@
 }
 .card-url_text:visited {
   color: #c0ccda;
-}
-
-.card-separator {
-  height: 1px;
-  margin: 4px 0;
-  background: #442244;
 }
 
 .card-keywords_list {

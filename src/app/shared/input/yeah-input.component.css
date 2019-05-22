@@ -4,9 +4,10 @@
 }
 
 .input-control {
-  width: calc(100% - 24px);
+  width: 100%;
   height: 36px;
-  margin: 4px 12px 6px 12px;
+  padding-top: 6px;
+  padding-left: 0;
   color: white;
   box-sizing: border-box;
   font-size: inherit;
@@ -32,7 +33,6 @@
 }
 
 .input-control_label {
-  margin-left: 12px;
   opacity: 0.8;
   font-weight: 400;
   font-size: small;
@@ -55,9 +55,9 @@
 
 .input-control_underline {
   position: absolute;
-  bottom: 6px;
-  left: 12px;
-  right: 12px;
+  bottom: 0;
+  left: 0;
+  right: 0;
   height: 1px;
   background-color: #3cefff;
   transform-origin: bottom right;

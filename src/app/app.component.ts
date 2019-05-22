@@ -55,9 +55,9 @@ import { Component } from "@angular/core";
         flex-direction: column;
         width: 500px;
         margin: 12px;
-        padding: 12px;
+        padding: 24px;
         border-radius: 8px;
-        background: #12102e; /*#090821;*/
+        background: #12102e;
         color: #ffffff;
         box-shadow: 0 10px 15px -3px #12102e, 0 4px 6px -2px #12102e;
         transition: 0.3s;
@@ -66,10 +66,15 @@ import { Component } from "@angular/core";
         box-shadow: 0 20px 30px -3px #12102e, 0 8px 12px -2px #12102e;
       }
 
+      form yeah-input,
+      form yeah-textarea {
+        margin-bottom: 12px;
+      }
+
       form yeah-button {
         display: flex;
         justify-content: flex-end;
-        margin: 4px 10px;
+        margin: 4px;
       }
     `
   ]
