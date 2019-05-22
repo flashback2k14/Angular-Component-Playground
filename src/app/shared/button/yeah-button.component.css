@@ -1,0 +1,39 @@
+button {
+  display: inline-block;
+  position: relative;
+  z-index: 1;
+  cursor: pointer;
+  font-size: large;
+  border: none;
+  text-decoration: none;
+  background: transparent;
+  font-weight: lighter;
+  color: inherit;
+  line-height: 1.2;
+  cursor: pointer;
+  text-align: center;
+  transition: background 250ms ease-in-out, transform 150ms ease;
+  outline: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+button::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: -2px;
+  bottom: -1px;
+  left: 0;
+  right: 0;
+  background-color: #442244;
+  transform-origin: bottom center;
+  transform: scaleY(0.05);
+  transition: all 0.1s ease-in-out;
+}
+
+button:hover::before,
+button:focus::before {
+  transform: scaleY(1);
+  background-color: hsla(341, 97%, 59%, 0.75);
+}

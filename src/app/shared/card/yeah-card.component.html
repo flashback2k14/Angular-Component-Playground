@@ -1,0 +1,37 @@
+<div class="card-overlay">
+	<div class="card">
+		<div>
+			<div class="card-separator"></div>
+			<div class="card-title">URL</div>
+			<div class="card-separator"></div>
+			<div class="card-url">
+				<a *ngIf="!editUrlMode" class="card-url_text" href="{{ url.link }}" target="_blank">{{ url.link }}</a>
+				<yeah-textarea *ngIf="editUrlMode" inputTabIndex="1" placeholderText="Edit your URL..." rowCount="5" labelText="URL"
+				 inputValue="{{ url.link }}" name="url" ngModel></yeah-textarea>
+			</div>
+		</div>
+		<div>
+			<div class="card-separator"></div>
+			<div class="card-title">Keywords</div>
+			<div class="card-separator"></div>
+			<ul class="card-keywords_list">
+				<li class="card-keywords_item" *ngFor="let tag of url.tags" (click)="tagItemClicked.emit(tag)">{{ tag.name }}</li>
+			</ul>
+		</div>
+		<div class="card-separator"></div>
+		<div class="card-actions">
+			<yeah-button (click)="toggleDeleteConfirmation()">Delete</yeah-button>
+			<yeah-button (click)="editUrl()">{{ editButtonText }}</yeah-button>
+		</div>
+	</div>
+	<div [ngClass]="{
+        'confirm-delete_container': true,
+        'active': showDeleteConfirmation
+      }">
+		<div>Are you sure to delete this URL?</div>
+		<div class="card-actions delete-actions">
+			<yeah-button (click)="toggleDeleteConfirmation()">Cancel</yeah-button>
+			<yeah-button (click)="deleteUrl()">Delete</yeah-button>
+		</div>
+	</div>
+</div>

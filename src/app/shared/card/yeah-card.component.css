@@ -1,0 +1,114 @@
+.card-overlay {
+  position: relative;
+  width: inherit;
+  height: inherit;
+}
+.confirm-delete_container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  display: none;
+  background: #12102e;
+  color: #ffffff;
+  border-radius: 6px;
+  transition: 0.3s;
+}
+.active {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  background: #12102e;
+  color: #ffffff;
+  padding: 18px 18px 14px 18px;
+  border-radius: 8px;
+  background: #12102e;
+  box-shadow: 0 10px 15px -3px #12102e, 0 4px 6px -2px #12102e;
+  transition: all 0.5s;
+}
+.card:hover,
+.card:focus {
+  box-shadow: 0 20px 30px -3px #12102e, 0 8px 12px -2px #12102e;
+}
+
+.card-title {
+  padding: 8px 0 4px 0;
+  font-size: large;
+}
+
+.card-url {
+  padding: 6px 0;
+}
+
+.card-url_text {
+  margin: 0;
+  padding: 0;
+  color: #ffffff;
+  font-size: small;
+  font-weight: lighter;
+  text-decoration: none;
+  outline: none;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  -ms-word-break: break-all;
+  /* This is the dangerous one in WebKit, as it breaks things wherever */
+  word-break: break-all;
+  /* Instead use this non-standard one: */
+  word-break: break-word;
+  /* Adds a hyphen where the word breaks, if supported (No Blink) */
+  -ms-hyphens: auto;
+  -moz-hyphens: auto;
+  -webkit-hyphens: auto;
+  hyphens: auto;
+}
+.card-url_text:hover,
+.icard-url_text:focus {
+  text-decoration: underline;
+}
+.card-url_text:visited {
+  color: #c0ccda;
+}
+
+.card-separator {
+  height: 1px;
+  margin: 4px 0;
+  background: #442244;
+}
+
+.card-keywords_list {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  margin: 4px 0;
+  padding: 0;
+  overflow: auto;
+}
+
+.card-keywords_item {
+  margin: 8px 8px 4px 0;
+  padding: 7px 6px 4px 6px;
+  border: 1px solid #442244;
+  border-radius: 4px;
+}
+.card-keywords_item:hover {
+  background: #fc2f70;
+  cursor: pointer;
+}
+
+.card-actions {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 6px;
+}
+
+.delete-actions {
+  padding: 8px;
+}

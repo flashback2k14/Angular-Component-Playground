@@ -1,0 +1,103 @@
+textarea {
+  border: 0;
+  padding: 3px 0;
+  box-shadow: none;
+  outline: 0;
+  border-bottom: 2px solid #eee;
+}
+
+.is-floating-label {
+  position: relative;
+  margin-bottom: 15px;
+}
+.is-floating-label input {
+  position: absolute;
+  left: 0;
+  background-color: transparent;
+}
+.is-floating-label label {
+  opacity: 0.3;
+  pointer-events: none;
+  position: absolute;
+  transform: translate3d(0, 0, 0) scale(1);
+  transform-origin: left top;
+  transition: 100ms;
+  color: red;
+}
+.is-floating-label.is-focused label {
+  transform: translateY(-20px) scale(0.55);
+}
+
+/* .container {
+  position: relative;
+}
+
+.control {
+  width: 100%;
+  height: 48px;
+  margin: 4px 12px 6px 12px;
+  color: white;
+  box-sizing: border-box;
+  font-size: inherit;
+  font-family: inherit;
+  background-color: transparent;
+  border: 1px solid transparent;
+  border-bottom-color: hsla(185, 100%, 62%, 0.2);
+}
+
+.control:focus {
+  outline: none;
+}
+
+.control::placeholder {
+  color: hsla(0, 0%, 100%, 0.6);
+}
+
+.control:-webkit-autofill,
+.control:-webkit-autofill:hover,
+.control:-webkit-autofill:focus {
+  -webkit-text-fill-color: #fc2f70;
+  transition: background-color 5000s ease-in-out 0s;
+}
+
+.control_label {
+  margin-left: 12px;
+  opacity: 0.8;
+  font-weight: 400;
+  font-size: small;
+}
+
+.container .control_label {
+  position: absolute;
+  top: calc(50% - 5px);
+  left: 0;
+  opacity: 0;
+  margin-bottom: 0;
+  transition: all 0.3s ease;
+}
+.container .control:not(:placeholder-shown) {
+  padding: 20px 0 0 0;
+}
+.container .control:not(:placeholder-shown) + .control_label {
+  -webkit-transform: translateY(-14px);
+  transform: translateY(-14px);
+  opacity: 0.7;
+}
+
+.control_underline {
+  position: absolute;
+  bottom: 6px;
+  left: 12px;
+  right: 12px;
+  height: 1px;
+  background-color: #3cefff;
+  transform-origin: bottom right;
+  transform: scaleX(0);
+  transition: transform 0.5s ease;
+}
+
+.control:focus ~ .control_underline,
+.control:hover ~ .control_underline {
+  transform-origin: bottom left;
+  transform: scaleX(1);
+} */
