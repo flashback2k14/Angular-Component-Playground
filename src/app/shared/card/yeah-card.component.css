@@ -28,7 +28,7 @@
   flex-direction: column;
   background: #12102e;
   color: #ffffff;
-  padding: 18px 18px 14px 18px;
+  padding: 18px;
   border-radius: 8px;
   background: #12102e;
   box-shadow: 0 10px 15px -3px #12102e, 0 4px 6px -2px #12102e;
@@ -37,10 +37,6 @@
 .card:hover,
 .card:focus {
   box-shadow: 0 20px 30px -3px #12102e, 0 8px 12px -2px #12102e;
-}
-
-.card-url {
-  padding: 6px 0;
 }
 
 .card-url_text {
@@ -76,7 +72,7 @@
   display: flex;
   align-items: center;
   list-style: none;
-  margin: 4px 0;
+  margin: 0;
   padding: 0;
   overflow: auto;
 }
@@ -95,7 +91,7 @@
 .card-actions {
   display: flex;
   justify-content: space-between;
-  margin-top: 6px;
+  margin-top: 10px;
 }
 
 .delete-confirmation_text {

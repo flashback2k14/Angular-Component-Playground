@@ -1,12 +1,10 @@
 <div class="card-overlay">
 	<div class="card">
 		<div>
-			<div class="card-url">
-				<a *ngIf="!editUrlMode" class="card-url_text" href="{{ url.link }}" target="_blank">{{ url.link }}</a>
-				<yeah-textarea *ngIf="editUrlMode" inputId="txtEditUrl" inputTabIndex="1" placeholderText="Edit your URL..."
-				 labelText="URL" inputValue="{{ url.link }}" name="edit-url" ngModel>
-				</yeah-textarea>
-			</div>
+			<a *ngIf="!editUrlMode" class="card-url_text" href="{{ url.link }}" target="_blank">{{ url.link }}</a>
+			<yeah-textarea *ngIf="editUrlMode" inputId="txtEditUrl" inputTabIndex="1" placeholderText="Edit your URL..."
+			 labelText="URL" inputValue="{{ url.link }}" name="edit-url" ngModel>
+			</yeah-textarea>
 		</div>
 		<div>
 			<ul class="card-keywords_list">
