@@ -16,7 +16,6 @@
   border-bottom-color: hsla(185, 100%, 62%, 0.2);
   overflow: auto;
   resize: none;
-  /* border: white 1px solid; https://codepen.io/netgloo/pen/JXreqJ?editors=1100 */
 }
 
 .control:focus {
@@ -43,15 +42,12 @@
 
 .container .control_label {
   position: absolute;
-  /* top: calc(15% - 5px); */
-  top: 2px;
+  top: 4px;
   left: 2px;
   opacity: 0;
   transition: all 0.3s ease;
 }
-.container .control:not(:placeholder-shown) {
-  /* padding: 20px 0 0 0; */
-}
+
 .container .control:not(:placeholder-shown) + .control_label {
   -webkit-transform: translateY(-16px);
   transform: translateY(-16px);
