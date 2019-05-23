@@ -3,29 +3,34 @@
 		<div>
 			<a *ngIf="!editUrlMode" class="card-url_text" href="{{ url.link }}" target="_blank">{{ url.link }}</a>
 			<yeah-textarea *ngIf="editUrlMode" inputId="txtEditUrl" inputTabIndex="1" placeholderText="Edit your URL..."
-			 labelText="URL" inputValue="{{ url.link }}" name="edit-url" ngModel>
+			 labelText="URL" inputValue="{{ url.link }}" rowCount="3" name="edit-url" ngModel>
 			</yeah-textarea>
 		</div>
-		<div>
-			<ul class="card-keywords_list">
-				<li class="card-keywords_item" *ngFor="let tag of url.tags" (click)="tagItemClicked.emit(tag)">{{ tag.name }}</li>
-			</ul>
-		</div>
+		<ul class="card-keywords_list">
+			<div *ngFor="let tag of url.tags" class="card-keywords_item">
+				<div class="card-keywords_item-text" (click)="fireSelectedTag(tag)">
+					{{ tag.name }}
+				</div>
+				<div *ngIf="editUrlMode" class="card-keywords_item-delete" (click)="fireDeleteTag(tag)">&times;</div>
+			</div>
+		</ul>
 		<div class="card-separator"></div>
 		<div class="card-actions">
-			<yeah-button *ngIf="!editUrlMode" (click)="toggleDeleteConfirmation()">Delete</yeah-button>
-			<yeah-button *ngIf="editUrlMode" (click)="cancelEdit()">Cancel</yeah-button>
-			<yeah-button (click)="editUrl()">{{ editButtonText }}</yeah-button>
+			<yeah-button *ngIf="!editUrlMode" (click)="toggleDeleteConfirmationMode()">Delete</yeah-button>
+			<yeah-button *ngIf="editUrlMode" (click)="cancelEditMode()">Cancel</yeah-button>
+			<yeah-button (click)="fireEditUrl()">{{ editButtonText }}</yeah-button>
 		</div>
 	</div>
 	<div [ngClass]="{
         'confirm-delete_container': true,
         'active': showDeleteConfirmation
       }">
-		<div class="delete-confirmation_text">Are you sure to delete this URL?</div>
+		<div class="delete-confirmation_text">
+			Are you sure to delete this URL?
+		</div>
 		<div class="card-actions delete-actions">
-			<yeah-button (click)="toggleDeleteConfirmation()">Cancel</yeah-button>
-			<yeah-button (click)="deleteUrl()">Delete</yeah-button>
+			<yeah-button (click)="toggleDeleteConfirmationMode()">Cancel</yeah-button>
+			<yeah-button (click)="fireDeleteUrl()">Delete</yeah-button>
 		</div>
 	</div>
 </div>

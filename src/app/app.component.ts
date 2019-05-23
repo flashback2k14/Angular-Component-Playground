@@ -41,9 +41,10 @@ import { Component } from "@angular/core";
         <yeah-card
           *ngFor="let url of data"
           [url]="url"
-          (tagItemClicked)="handleTagItemClicked($event)"
-          (deleteButtonClicked)="handleDeleteButtonClicked($event)"
-          (editButtonClicked)="handleEditButtonClicked($event)"
+          (selectedTagItem)="handleSelectedTagItem($event)"
+          (deleteTagItem)="handleDeleteTagItem($event)"
+          (deleteUrlItem)="handleDeleteUrlItem($event)"
+          (editUrlItem)="handleEditUrlItem($event)"
         ></yeah-card>
       </yeah-list>
     </div>
@@ -276,18 +277,26 @@ export class AppComponent {
   ];
 
   submit($event: any): void {
-    alert(JSON.stringify($event, null, 2));
+    this._showAlert($event);
   }
 
-  handleTagItemClicked($event: any): void {
-    alert(JSON.stringify($event, null, 2));
+  handleSelectedTagItem($event: any): void {
+    this._showAlert($event);
   }
 
-  handleDeleteButtonClicked($event: any): void {
-    alert(JSON.stringify($event, null, 2));
+  handleDeleteTagItem($event: any): void {
+    this._showAlert($event);
   }
 
-  handleEditButtonClicked($event: any): void {
-    alert(JSON.stringify($event, null, 2));
+  handleDeleteUrlItem($event: any): void {
+    this._showAlert($event);
+  }
+
+  handleEditUrlItem($event: any): void {
+    this._showAlert($event);
+  }
+
+  private _showAlert(value: any): void {
+    alert(JSON.stringify(value, null, 2));
   }
 }

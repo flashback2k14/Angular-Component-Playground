@@ -7,47 +7,58 @@ import { Component, Input, Output, EventEmitter } from "@angular/core";
 })
 export class YeahCardComponent {
   @Input() url: any;
-  @Output() tagItemClicked: EventEmitter<any>;
-  @Output() deleteButtonClicked: EventEmitter<any>;
-  @Output() editButtonClicked: EventEmitter<any>;
+  @Output() selectedTagItem: EventEmitter<any>;
+  @Output() deleteTagItem: EventEmitter<any>;
+  @Output() deleteUrlItem: EventEmitter<any>;
+  @Output() editUrlItem: EventEmitter<any>;
 
   showDeleteConfirmation: boolean;
   editUrlMode: boolean;
   editButtonText: string;
 
   constructor() {
-    this.tagItemClicked = new EventEmitter<any>();
-    this.deleteButtonClicked = new EventEmitter<any>();
-    this.editButtonClicked = new EventEmitter<any>();
+    this.selectedTagItem = new EventEmitter<any>();
+    this.deleteTagItem = new EventEmitter<any>();
+    this.deleteUrlItem = new EventEmitter<any>();
+    this.editUrlItem = new EventEmitter<any>();
 
     this.showDeleteConfirmation = false;
     this.editUrlMode = false;
     this.editButtonText = "Edit";
   }
 
-  toggleDeleteConfirmation(): void {
+  fireSelectedTag(tag: any): void {
+    this.selectedTagItem.emit(tag);
+  }
+
+  fireDeleteTag(tag: any): void {
+    this.deleteTagItem.emit(tag);
+  }
+
+  toggleDeleteConfirmationMode(): void {
     this.showDeleteConfirmation = !this.showDeleteConfirmation;
   }
 
-  cancelEdit(): void {
+  cancelEditMode(): void {
     if (this.editUrlMode) {
       this.editUrlMode = false;
       this.editButtonText = "Edit";
     }
   }
 
-  editUrl(): void {
+  fireEditUrl(): void {
     if (this.editButtonText === "Edit") {
       this.editUrlMode = !this.editUrlMode;
       this.editButtonText = "Save";
     } else {
-      this.editButtonClicked.emit(this.url);
       this.editUrlMode = !this.editUrlMode;
       this.editButtonText = "Edit";
+      this.editUrlItem.emit(this.url);
     }
   }
 
-  deleteUrl(): void {
-    this.deleteButtonClicked.emit(this.url);
+  fireDeleteUrl(): void {
+    this.toggleDeleteConfirmationMode();
+    this.deleteUrlItem.emit(this.url);
   }
 }

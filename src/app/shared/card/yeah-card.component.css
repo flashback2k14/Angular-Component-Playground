@@ -19,7 +19,7 @@
 .active {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: center;
   text-align: center;
 }
 
@@ -70,32 +70,57 @@
 
 .card-keywords_list {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   list-style: none;
-  margin: 0;
+  margin: 16px 0 4px 0;
   padding: 0;
   overflow: auto;
 }
 
 .card-keywords_item {
-  margin: 8px 8px 4px 0;
-  padding: 7px 6px 4px 6px;
+  display: flex;
+  align-items: center;
+  padding-bottom: 8px;
+}
+
+.card-keywords_item-text {
+  padding: 6px;
+  margin-right: 8px;
   border: 1px solid #442244;
   border-radius: 4px;
+  text-align: center;
+  white-space: nowrap;
 }
-.card-keywords_item:hover {
+.card-keywords_item-text:hover {
   background: #fc2f70;
   cursor: pointer;
+}
+.card-keywords_list::-webkit-scrollbar {
+  height: 4px;
+  width: 6px;
+}
+
+.card-keywords_item-delete {
+  display: flex;
+  margin-right: 8px;
+  font-size: small;
+  cursor: pointer;
+}
+
+.card-separator {
+  height: 1px;
+  margin: 4px 0;
+  background: #442244;
 }
 
 .card-actions {
   display: flex;
   justify-content: space-between;
-  margin-top: 10px;
+  margin-top: 12px;
 }
 
 .delete-confirmation_text {
-  margin-top: 76px;
+  margin-top: 36px;
 }
 
 .delete-actions {
