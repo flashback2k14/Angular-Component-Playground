@@ -11,20 +11,14 @@ export class YeahCardComponent {
   @Output() deleteTagItem: EventEmitter<any>;
   @Output() deleteUrlItem: EventEmitter<any>;
   @Output() editUrlItem: EventEmitter<any>;
-
-  showDeleteConfirmation: boolean;
-  editUrlMode: boolean;
-  editButtonText: string;
+  mode: string;
 
   constructor() {
     this.selectedTagItem = new EventEmitter<any>();
     this.deleteTagItem = new EventEmitter<any>();
     this.deleteUrlItem = new EventEmitter<any>();
     this.editUrlItem = new EventEmitter<any>();
-
-    this.showDeleteConfirmation = false;
-    this.editUrlMode = false;
-    this.editButtonText = "Edit";
+    this.mode = "show";
   }
 
   fireSelectedTag(tag: any): void {
@@ -36,23 +30,24 @@ export class YeahCardComponent {
   }
 
   toggleDeleteConfirmationMode(): void {
-    this.showDeleteConfirmation = !this.showDeleteConfirmation;
+    if (this.mode === "delete") {
+      this.mode = "show";
+    } else {
+      this.mode = "delete";
+    }
   }
 
   cancelEditMode(): void {
-    if (this.editUrlMode) {
-      this.editUrlMode = false;
-      this.editButtonText = "Edit";
+    if (this.mode === "edit") {
+      this.mode = "show";
     }
   }
 
   fireEditUrl(): void {
-    if (this.editButtonText === "Edit") {
-      this.editUrlMode = !this.editUrlMode;
-      this.editButtonText = "Save";
+    if (this.mode === "show") {
+      this.mode = "edit";
     } else {
-      this.editUrlMode = !this.editUrlMode;
-      this.editButtonText = "Edit";
+      this.mode = "show";
       this.editUrlItem.emit(this.url);
     }
   }

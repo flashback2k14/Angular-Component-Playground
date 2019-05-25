@@ -1,36 +1,62 @@
-<div class="card-overlay">
-	<div class="card">
-		<div>
-			<yeah-link *ngIf="!editUrlMode" tabIndex="1" link="{{ url.link }}"></yeah-link>
-			<yeah-textarea *ngIf="editUrlMode" inputId="txtEditUrl" inputTabIndex="1" placeholderText="Edit your URL..."
-			 labelText="URL" inputValue="{{ url.link }}" rowCount="3" name="edit-url" ngModel>
-			</yeah-textarea>
-		</div>
-		<ul class="card-keywords_list">
-			<div *ngFor="let tag of url.tags" class="card-keywords_item">
-				<div class="card-keywords_item-text" (click)="fireSelectedTag(tag)">
-					{{ tag.name }}
-				</div>
-				<div *ngIf="editUrlMode" class="card-keywords_item-delete" (click)="fireDeleteTag(tag)">&times;</div>
-			</div>
-		</ul>
-		<div class="card-separator"></div>
-		<div class="card-actions">
-			<yeah-button *ngIf="!editUrlMode" (click)="toggleDeleteConfirmationMode()">Delete</yeah-button>
-			<yeah-button *ngIf="editUrlMode" (click)="cancelEditMode()">Cancel</yeah-button>
-			<yeah-button (click)="fireEditUrl()">{{ editButtonText }}</yeah-button>
-		</div>
-	</div>
-	<div [ngClass]="{
-        'confirm-delete_container': true,
-        'active': showDeleteConfirmation
-      }">
-		<div class="delete-confirmation_text">
-			Are you sure to delete this URL?
-		</div>
-		<div class="card-actions delete-actions">
-			<yeah-button (click)="toggleDeleteConfirmationMode()">Cancel</yeah-button>
-			<yeah-button (click)="fireDeleteUrl()">Delete</yeah-button>
-		</div>
-	</div>
+<div class="card">
+  <div *ngIf="mode === 'show'; then show"></div>
+  <div *ngIf="mode === 'edit'; then edit"></div>
+  <div *ngIf="mode === 'delete'; then delete"></div>
 </div>
+
+<ng-template #show>
+  <yeah-link tabIndex="1" link="{{ url.link }}"></yeah-link>
+  <ul class="card-keywords_list">
+    <div *ngFor="let tag of url.tags" class="card-keywords_item">
+      <div class="card-keywords_item-text" (click)="fireSelectedTag(tag)">
+        {{ tag.name }}
+      </div>
+    </div>
+  </ul>
+  <div class="card-separator"></div>
+  <div class="card-actions">
+    <yeah-button (click)="toggleDeleteConfirmationMode()">Delete</yeah-button>
+    <yeah-button (click)="fireEditUrl()">Edit</yeah-button>
+  </div>
+</ng-template>
+
+<ng-template #edit>
+  <yeah-textarea
+    inputId="txtEditUrl"
+    inputTabIndex="1"
+    placeholderText="Edit your URL..."
+    labelText="URL"
+    inputValue="{{ url.link }}"
+    rowCount="3"
+    name="edit-url"
+    ngModel
+  >
+  </yeah-textarea>
+  <ul class="card-keywords_list">
+    <div *ngFor="let tag of url.tags" class="card-keywords_item">
+      <div class="card-keywords_item-text" (click)="fireSelectedTag(tag)">
+        {{ tag.name }}
+      </div>
+      <div class="card-keywords_item-delete" (click)="fireDeleteTag(tag)">
+        &times;
+      </div>
+    </div>
+  </ul>
+  <div class="card-separator"></div>
+  <div class="card-actions">
+    <yeah-button (click)="cancelEditMode()">Cancel</yeah-button>
+    <yeah-button (click)="fireEditUrl()">Save</yeah-button>
+  </div>
+</ng-template>
+
+<ng-template #delete>
+  <div class="delete-container">
+    <div class="delete-confirmation_text">
+      Are you sure to delete this URL?
+    </div>
+    <div class="card-actions delete-actions">
+      <yeah-button (click)="toggleDeleteConfirmationMode()">Cancel</yeah-button>
+      <yeah-button (click)="fireDeleteUrl()">Delete</yeah-button>
+    </div>
+  </div>
+</ng-template>
