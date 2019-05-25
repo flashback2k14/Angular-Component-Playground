@@ -1,0 +1,12 @@
+.list {
+  display: flex;
+  align-items: flex-start;
+  list-style: none;
+  margin: 16px 0 4px 0;
+  padding: 0;
+  overflow: auto;
+}
+.list::-webkit-scrollbar {
+  height: 4px;
+  width: 6px;
+}

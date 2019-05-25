@@ -1,0 +1,8 @@
+<div class="item">
+	<div class="item-text" (click)="selectedTagItem.emit(item)">
+		{{ item.name }}
+	</div>
+	<div *ngIf="showDeleteIcon" class="item-delete" (click)="deleteTagItem.emit(item)">
+		&times;
+	</div>
+</div>

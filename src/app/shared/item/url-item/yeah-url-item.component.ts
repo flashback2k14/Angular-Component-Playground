@@ -1,11 +1,11 @@
 import { Component, Input, Output, EventEmitter } from "@angular/core";
 
 @Component({
-  selector: "yeah-card",
-  templateUrl: "./yeah-card.component.html",
-  styleUrls: ["./yeah-card.component.css"]
+  selector: "yeah-url-item",
+  templateUrl: "./yeah-url-item.component.html",
+  styleUrls: ["./yeah-url-item.component.css"]
 })
-export class YeahCardComponent {
+export class YeahUrlItemComponent {
   @Input() url: any;
   @Output() selectedTagItem: EventEmitter<any>;
   @Output() deleteTagItem: EventEmitter<any>;

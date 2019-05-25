@@ -39,16 +39,16 @@ import { Component } from "@angular/core";
 
       <yeah-search></yeah-search>
 
-      <yeah-list>
-        <yeah-card
+      <yeah-url-list>
+        <yeah-url-item
           *ngFor="let url of data"
           [url]="url"
           (selectedTagItem)="handleSelectedTagItem($event)"
           (deleteTagItem)="handleDeleteTagItem($event)"
           (deleteUrlItem)="handleDeleteUrlItem($event)"
           (editUrlItem)="handleEditUrlItem($event)"
-        ></yeah-card>
-      </yeah-list>
+        ></yeah-url-item>
+      </yeah-url-list>
     </div>
   `,
   styles: [

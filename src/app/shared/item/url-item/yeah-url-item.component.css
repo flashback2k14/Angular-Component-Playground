@@ -1,0 +1,37 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  background: #12102e;
+  color: #ffffff;
+  padding: 18px;
+  border-radius: 8px;
+  background: #12102e;
+  box-shadow: 0 10px 15px -3px #12102e, 0 4px 6px -2px #12102e;
+  transition: all 0.5s;
+}
+.card:hover,
+.card:focus {
+  box-shadow: 0 20px 30px -3px #12102e, 0 8px 12px -2px #12102e;
+}
+
+.card-actions {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 12px;
+}
+
+.delete-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: center;
+}
+
+.delete-confirmation_text {
+  margin-top: 36px;
+  margin-bottom: 12px;
+}
+
+.delete-actions {
+  margin: 24px 0 6px 0;
+}

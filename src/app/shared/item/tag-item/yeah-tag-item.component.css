@@ -1,0 +1,25 @@
+.item {
+  display: flex;
+  align-items: center;
+  padding-bottom: 8px;
+}
+
+.item-text {
+  padding: 6px;
+  margin-right: 8px;
+  border: 1px solid #442244;
+  border-radius: 4px;
+  text-align: center;
+  white-space: nowrap;
+}
+.item-text:hover {
+  background: #fc2f70;
+  cursor: pointer;
+}
+
+.item-delete {
+  display: flex;
+  margin-right: 8px;
+  font-size: small;
+  cursor: pointer;
+}
