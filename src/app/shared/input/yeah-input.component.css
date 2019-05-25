@@ -20,11 +20,9 @@
 .input-control:focus {
   outline: none;
 }
-
 .input-control::placeholder {
   color: hsla(0, 0%, 100%, 0.6);
 }
-
 .input-control:-webkit-autofill,
 .input-control:-webkit-autofill:hover,
 .input-control:-webkit-autofill:focus {
@@ -33,24 +31,24 @@
 }
 
 .input-control_label {
-  opacity: 0.8;
   font-weight: 400;
   font-size: small;
+  text-transform: uppercase;
 }
 
 .input-container .input-control_label {
   position: absolute;
   top: 4px;
-  left: 0;
+  left: 1px;
   opacity: 0;
   margin-bottom: 0;
   transition: all 0.3s ease;
 }
 
-.input-container .input-control:not(:placeholder-shown) + .input-control_label {
-  -webkit-transform: translateY(-12px);
-  transform: translateY(-12px);
-  opacity: 0.7;
+.input-container .input-control + .input-control_label {
+  -webkit-transform: translateY(-14px);
+  transform: translateY(-14px);
+  opacity: 0.9;
 }
 
 .input-control_underline {

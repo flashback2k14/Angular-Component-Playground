@@ -20,11 +20,9 @@
 .control:focus {
   outline: none;
 }
-
 .control::placeholder {
   color: hsla(0, 0%, 100%, 0.6);
 }
-
 .control:-webkit-autofill,
 .control:-webkit-autofill:hover,
 .control:-webkit-autofill:focus {
@@ -33,10 +31,9 @@
 }
 
 .control_label {
-  /* margin-left: 12px; */
-  opacity: 0.8;
   font-weight: 400;
   font-size: small;
+  text-transform: uppercase;
 }
 
 .container .control_label {
@@ -47,10 +44,10 @@
   transition: all 0.3s ease;
 }
 
-.container .control:not(:placeholder-shown) + .control_label {
-  -webkit-transform: translateY(-16px);
-  transform: translateY(-16px);
-  opacity: 0.7;
+.container .control + .control_label {
+  -webkit-transform: translateY(-18px);
+  transform: translateY(-18px);
+  opacity: 0.9;
 }
 
 .control_underline {

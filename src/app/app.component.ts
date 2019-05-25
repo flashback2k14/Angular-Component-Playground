@@ -10,7 +10,7 @@ import { Component } from "@angular/core";
             inputId="txtUsername"
             inputTabIndex="1"
             inputType="text"
-            placeholderText="Enter your username..."
+            placeholderText="enter here..."
             labelText="Username"
             name="username"
             ngModel
@@ -19,7 +19,7 @@ import { Component } from "@angular/core";
             inputId="txtPassword"
             inputTabIndex="2"
             inputType="password"
-            placeholderText="Enter your password..."
+            placeholderText="enter here..."
             labelText="Password"
             name="password"
             ngModel
@@ -27,7 +27,7 @@ import { Component } from "@angular/core";
           <yeah-textarea
             inputId="txtarea"
             inputTabIndex="3"
-            placeholderText="Enter your multiline..."
+            placeholderText="enter here..."
             labelText="Multiline"
             rowCount="7"
             name="area"

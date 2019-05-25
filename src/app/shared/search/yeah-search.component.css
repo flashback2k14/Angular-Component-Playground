@@ -1,0 +1,16 @@
+.search {
+  display: flex;
+  flex-direction: column;
+  background: #12102e;
+  color: #ffffff;
+  margin: 12px;
+  padding: 14px 24px 18px 24px;
+  border-radius: 8px;
+  background: #12102e;
+  box-shadow: 0 10px 15px -3px #12102e, 0 4px 6px -2px #12102e;
+  transition: all 0.5s;
+}
+.search:hover,
+.search:focus {
+  box-shadow: 0 20px 30px -3px #12102e, 0 8px 12px -2px #12102e;
+}
