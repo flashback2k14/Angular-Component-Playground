@@ -37,6 +37,8 @@ import { Component } from "@angular/core";
         </form>
       </div>
 
+      <yeah-search></yeah-search>
+
       <yeah-list>
         <yeah-card
           *ngFor="let url of data"

@@ -5,6 +5,7 @@ import { YeahButtonComponent } from "./button/yeah-button.component";
 import { YeahCardComponent } from "./card/yeah-card.component";
 import { YeahInputComponent } from "./input/yeah-input.component";
 import { YeahListComponent } from "./list/yeah-list.component";
+import { YeahSearchComponent } from "./search/yeah-search.component";
 import { YeahTextareaComponent } from "./textarea/yeah-textarea.component";
 
 @NgModule({
@@ -13,6 +14,7 @@ import { YeahTextareaComponent } from "./textarea/yeah-textarea.component";
     YeahCardComponent,
     YeahInputComponent,
     YeahListComponent,
+    YeahSearchComponent,
     YeahTextareaComponent
   ],
   imports: [CommonModule, FormsModule],
@@ -21,6 +23,7 @@ import { YeahTextareaComponent } from "./textarea/yeah-textarea.component";
     YeahCardComponent,
     YeahInputComponent,
     YeahListComponent,
+    YeahSearchComponent,
     YeahTextareaComponent,
     FormsModule
   ]
