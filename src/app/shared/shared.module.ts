@@ -4,6 +4,7 @@ import { FormsModule } from "@angular/forms";
 import { YeahButtonComponent } from "./button/yeah-button.component";
 import { YeahCardComponent } from "./card/yeah-card.component";
 import { YeahInputComponent } from "./input/yeah-input.component";
+import { YeahLinkComponent } from "./link/yeah-link.component";
 import { YeahListComponent } from "./list/yeah-list.component";
 import { YeahSearchComponent } from "./search/yeah-search.component";
 import { YeahTextareaComponent } from "./textarea/yeah-textarea.component";
@@ -13,6 +14,7 @@ import { YeahTextareaComponent } from "./textarea/yeah-textarea.component";
     YeahButtonComponent,
     YeahCardComponent,
     YeahInputComponent,
+    YeahLinkComponent,
     YeahListComponent,
     YeahSearchComponent,
     YeahTextareaComponent
@@ -22,6 +24,7 @@ import { YeahTextareaComponent } from "./textarea/yeah-textarea.component";
     YeahButtonComponent,
     YeahCardComponent,
     YeahInputComponent,
+    YeahLinkComponent,
     YeahListComponent,
     YeahSearchComponent,
     YeahTextareaComponent,

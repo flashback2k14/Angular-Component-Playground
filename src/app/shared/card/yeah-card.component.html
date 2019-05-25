@@ -1,7 +1,7 @@
 <div class="card-overlay">
 	<div class="card">
 		<div>
-			<a *ngIf="!editUrlMode" class="card-url_text" href="{{ url.link }}" target="_blank">{{ url.link }}</a>
+			<yeah-link *ngIf="!editUrlMode" tabIndex="1" link="{{ url.link }}"></yeah-link>
 			<yeah-textarea *ngIf="editUrlMode" inputId="txtEditUrl" inputTabIndex="1" placeholderText="Edit your URL..."
 			 labelText="URL" inputValue="{{ url.link }}" rowCount="3" name="edit-url" ngModel>
 			</yeah-textarea>
