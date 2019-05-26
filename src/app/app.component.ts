@@ -3,7 +3,7 @@ import { Component } from "@angular/core";
 @Component({
   selector: "app-root",
   template: `
-    <div>
+    <!--
       <div style="display:flex; justify-content: center;">
         <form #form="ngForm" (ngSubmit)="submit(form.value)">
           <yeah-input
@@ -36,7 +36,13 @@ import { Component } from "@angular/core";
           <yeah-button type="submit">Login</yeah-button>
         </form>
       </div>
+      -->
 
+    <header>
+      <div>TEST</div>
+    </header>
+
+    <main>
       <yeah-search></yeah-search>
 
       <yeah-url-list>
@@ -49,10 +55,31 @@ import { Component } from "@angular/core";
           (editUrlItem)="handleEditUrlItem($event)"
         ></yeah-url-item>
       </yeah-url-list>
-    </div>
+    </main>
+
+    <footer>
+      <yeah-bottom-bar></yeah-bottom-bar>
+    </footer>
   `,
   styles: [
     `
+      header {
+        height: 56px;
+        margin-top: 0;
+        background: #12102e;
+        color: white;
+      }
+
+      main {
+        height: calc(100vh - 112px);
+        padding-bottom: 62px;
+        overflow: auto;
+      }
+
+      footer {
+        height: 56px;
+      }
+
       form {
         display: flex;
         flex-direction: column;
@@ -84,6 +111,198 @@ import { Component } from "@angular/core";
 })
 export class AppComponent {
   data: any = [
+    {
+      link: "https://feather.netlify.com",
+      tags: [
+        {
+          name: "Icon Sets"
+        },
+        {
+          name: "Design"
+        }
+      ]
+    },
+    {
+      link: "https://react-smooth-range-input.now.sh/",
+      tags: [
+        {
+          name: "JS"
+        },
+        {
+          name: "React"
+        },
+        {
+          name: "Input Text"
+        },
+        {
+          name: "Library"
+        }
+      ]
+    },
+    {
+      link:
+        "https://css-tricks.com/a-responsive-grid-layout-with-no-media-queries/",
+      tags: [
+        {
+          name: "CSS"
+        },
+        {
+          name: "Grid"
+        },
+        {
+          name: "Layout"
+        },
+        {
+          name: "Useful Tips"
+        }
+      ]
+    },
+    {
+      link:
+        "https://medium.com/js-dojo/how-to-reduce-your-vue-js-bundle-size-with-webpack-3145bf5019b7",
+      tags: [
+        {
+          name: "JS"
+        },
+        {
+          name: "Vuex"
+        },
+        {
+          name: "Performance"
+        },
+        {
+          name: "Optimization"
+        }
+      ]
+    },
+    {
+      link: "https://feather.netlify.com",
+      tags: [
+        {
+          name: "Icon Sets"
+        },
+        {
+          name: "Design"
+        }
+      ]
+    },
+    {
+      link: "https://react-smooth-range-input.now.sh/",
+      tags: [
+        {
+          name: "JS"
+        },
+        {
+          name: "React"
+        },
+        {
+          name: "Input Text"
+        },
+        {
+          name: "Library"
+        }
+      ]
+    },
+    {
+      link:
+        "https://css-tricks.com/a-responsive-grid-layout-with-no-media-queries/",
+      tags: [
+        {
+          name: "CSS"
+        },
+        {
+          name: "Grid"
+        },
+        {
+          name: "Layout"
+        },
+        {
+          name: "Useful Tips"
+        }
+      ]
+    },
+    {
+      link:
+        "https://medium.com/js-dojo/how-to-reduce-your-vue-js-bundle-size-with-webpack-3145bf5019b7",
+      tags: [
+        {
+          name: "JS"
+        },
+        {
+          name: "Vuex"
+        },
+        {
+          name: "Performance"
+        },
+        {
+          name: "Optimization"
+        }
+      ]
+    },
+    {
+      link: "https://feather.netlify.com",
+      tags: [
+        {
+          name: "Icon Sets"
+        },
+        {
+          name: "Design"
+        }
+      ]
+    },
+    {
+      link: "https://react-smooth-range-input.now.sh/",
+      tags: [
+        {
+          name: "JS"
+        },
+        {
+          name: "React"
+        },
+        {
+          name: "Input Text"
+        },
+        {
+          name: "Library"
+        }
+      ]
+    },
+    {
+      link:
+        "https://css-tricks.com/a-responsive-grid-layout-with-no-media-queries/",
+      tags: [
+        {
+          name: "CSS"
+        },
+        {
+          name: "Grid"
+        },
+        {
+          name: "Layout"
+        },
+        {
+          name: "Useful Tips"
+        }
+      ]
+    },
+    {
+      link:
+        "https://medium.com/js-dojo/how-to-reduce-your-vue-js-bundle-size-with-webpack-3145bf5019b7",
+      tags: [
+        {
+          name: "JS"
+        },
+        {
+          name: "Vuex"
+        },
+        {
+          name: "Performance"
+        },
+        {
+          name: "Optimization"
+        }
+      ]
+    },
     {
       link: "https://feather.netlify.com",
       tags: [

@@ -1,6 +1,7 @@
 import { NgModule } from "@angular/core";
 import { CommonModule } from "@angular/common";
 import { FormsModule } from "@angular/forms";
+import { YeahBottomBarComponent } from "./bottom-bar/yeah-bottom-bar.component";
 import { YeahButtonComponent } from "./button/yeah-button.component";
 import { YeahInputComponent } from "./input/yeah-input.component";
 import { YeahTagItemComponent } from "./item/tag-item/yeah-tag-item.component";
@@ -14,6 +15,7 @@ import { YeahTextareaComponent } from "./textarea/yeah-textarea.component";
 
 @NgModule({
   declarations: [
+    YeahBottomBarComponent,
     YeahButtonComponent,
     YeahInputComponent,
     YeahTagItemComponent,
@@ -27,6 +29,7 @@ import { YeahTextareaComponent } from "./textarea/yeah-textarea.component";
   ],
   imports: [CommonModule, FormsModule],
   exports: [
+    YeahBottomBarComponent,
     YeahButtonComponent,
     YeahInputComponent,
     YeahTagItemComponent,
