@@ -72,6 +72,8 @@ import { Component } from "@angular/core";
 
       main {
         height: calc(100vh - 112px);
+        padding-left: 24px;
+        padding-right: 24px;
         padding-bottom: 62px;
         overflow: auto;
       }

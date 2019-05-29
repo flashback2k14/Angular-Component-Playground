@@ -11,6 +11,7 @@
 .card:hover,
 .card:focus {
   box-shadow: 0 20px 30px -3px #12102e, 0 8px 12px -2px #12102e;
+  transform: scale(1.03);
 }
 
 .card-actions {
