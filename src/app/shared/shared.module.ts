@@ -3,6 +3,7 @@ import { CommonModule } from "@angular/common";
 import { FormsModule } from "@angular/forms";
 import { YeahBottomBarComponent } from "./bottom-bar/yeah-bottom-bar.component";
 import { YeahButtonComponent } from "./button/yeah-button.component";
+import { YeahHeaderComponent } from "./header/yeah-header.component";
 import { YeahInputComponent } from "./input/yeah-input.component";
 import { YeahTagItemComponent } from "./item/tag-item/yeah-tag-item.component";
 import { YeahUrlItemComponent } from "./item/url-item/yeah-url-item.component";
@@ -17,6 +18,7 @@ import { YeahTextareaComponent } from "./textarea/yeah-textarea.component";
   declarations: [
     YeahBottomBarComponent,
     YeahButtonComponent,
+    YeahHeaderComponent,
     YeahInputComponent,
     YeahTagItemComponent,
     YeahUrlItemComponent,
@@ -31,6 +33,7 @@ import { YeahTextareaComponent } from "./textarea/yeah-textarea.component";
   exports: [
     YeahBottomBarComponent,
     YeahButtonComponent,
+    YeahHeaderComponent,
     YeahInputComponent,
     YeahTagItemComponent,
     YeahUrlItemComponent,

@@ -38,9 +38,7 @@ import { Component } from "@angular/core";
       </div>
       -->
 
-    <header>
-      <div>TEST</div>
-    </header>
+    <yeah-header></yeah-header>
 
     <main>
       <yeah-search></yeah-search>
@@ -63,15 +61,9 @@ import { Component } from "@angular/core";
   `,
   styles: [
     `
-      header {
-        height: 56px;
-        margin-top: 0;
-        background: #12102e;
-        color: white;
-      }
-
       main {
         height: calc(100vh - 112px);
+        padding-top: 62px;
         padding-left: 24px;
         padding-right: 24px;
         padding-bottom: 62px;
