@@ -1,0 +1,11 @@
+<yeah-search></yeah-search>
+<yeah-url-list>
+  <yeah-url-item
+    *ngFor="let url of urls"
+    [url]="url"
+    (selectedTagItem)="handleSelectedTagItem($event)"
+    (deleteTagItem)="handleDeleteTagItem($event)"
+    (deleteUrlItem)="handleDeleteUrlItem($event)"
+    (editUrlItem)="handleEditUrlItem($event)"
+  ></yeah-url-item>
+</yeah-url-list>

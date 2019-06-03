@@ -1,0 +1,7 @@
+<div class="container">
+  <yeah-header homeRoute="dashboard" [menuItems]="navMenuItems"></yeah-header>
+  <main>
+    <router-outlet></router-outlet>
+  </main>
+  <yeah-bottom-bar (addNewItem)="handleAddNewItem()"></yeah-bottom-bar>
+</div>

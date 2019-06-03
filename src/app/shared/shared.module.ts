@@ -13,6 +13,7 @@ import { YeahUrlListComponent } from "./list/url-list/yeah-url-list.component";
 import { YeahSearchComponent } from "./search/yeah-search.component";
 import { YeahSeparatorComponent } from "./separator/yeah-separator.component";
 import { YeahTextareaComponent } from "./textarea/yeah-textarea.component";
+import { RouterModule } from "@angular/router";
 
 @NgModule({
   declarations: [
@@ -29,7 +30,7 @@ import { YeahTextareaComponent } from "./textarea/yeah-textarea.component";
     YeahSeparatorComponent,
     YeahTextareaComponent
   ],
-  imports: [CommonModule, FormsModule],
+  imports: [CommonModule, FormsModule, RouterModule],
   exports: [
     YeahBottomBarComponent,
     YeahButtonComponent,
@@ -43,7 +44,9 @@ import { YeahTextareaComponent } from "./textarea/yeah-textarea.component";
     YeahSearchComponent,
     YeahSeparatorComponent,
     YeahTextareaComponent,
-    FormsModule
+    CommonModule,
+    FormsModule,
+    RouterModule
   ]
 })
 export class SharedModule {}

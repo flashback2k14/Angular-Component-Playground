@@ -1,7 +1,8 @@
 import { NgModule, Optional, SkipSelf } from "@angular/core";
+import { DataService } from "./services/data.service";
 
 @NgModule({
-  providers: []
+  providers: [DataService]
 })
 export class CoreModule {
   constructor(@Optional() @SkipSelf() parentModule: CoreModule) {

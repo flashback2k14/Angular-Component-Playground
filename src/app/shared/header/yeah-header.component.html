@@ -1,27 +1,15 @@
 <header class="header">
-	<a href="#home" class="logo">
-		<span>Yeah! URLs</span>
-	</a>
-	<input class="menu-btn" type="checkbox" id="menu-btn" />
-	<label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
-	<ul class="menu">
-		<li>
-			<a href="#dashboard">
-				<i class="material-icons">dashboard</i>
-				<span>Dashboard</span>
-			</a>
-		</li>
-		<li>
-			<a href="#favorite">
-				<i class="material-icons">stars</i>
-				<span>Favorite</span>
-			</a>
-		</li>
-		<li>
-			<a href="#profile">
-				<i class="material-icons">face</i>
-				<span>Profile</span>
-			</a>
-		</li>
-	</ul>
+  <a routerLink="{{ homeRoute }}" class="logo">
+    <span>Yeah! URLs</span>
+  </a>
+  <input class="menu-btn" type="checkbox" id="menu-btn" />
+  <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
+  <ul class="menu">
+    <li *ngFor="let menuItem of menuItems">
+      <a [routerLink]="menuItem.route">
+        <i class="material-icons">{{ menuItem.iconName }}</i>
+        <span>{{ menuItem.name }}</span>
+      </a>
+    </li>
+  </ul>
 </header>

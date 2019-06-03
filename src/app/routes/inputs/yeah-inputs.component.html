@@ -1,0 +1,32 @@
+<div style="display:flex; justify-content: center;">
+  <form #form="ngForm" (ngSubmit)="submit(form.value)">
+    <yeah-input
+      inputId="txtUsername"
+      inputTabIndex="1"
+      inputType="text"
+      placeholderText="enter here..."
+      labelText="Username"
+      name="username"
+      ngModel
+    ></yeah-input>
+    <yeah-input
+      inputId="txtPassword"
+      inputTabIndex="2"
+      inputType="password"
+      placeholderText="enter here..."
+      labelText="Password"
+      name="password"
+      ngModel
+    ></yeah-input>
+    <yeah-textarea
+      inputId="txtarea"
+      inputTabIndex="3"
+      placeholderText="enter here..."
+      labelText="Multiline"
+      rowCount="7"
+      name="area"
+      ngModel
+    ></yeah-textarea>
+    <yeah-button type="submit">Login</yeah-button>
+  </form>
+</div>
