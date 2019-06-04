@@ -18,6 +18,7 @@ export class YeahRootComponent {
   }
 
   handleAddNewItem(): void {
+    // TODO: call Rx.JS UI-Service like UiService
     this._showAlert({ msg: "Add new Item" });
   }
 
