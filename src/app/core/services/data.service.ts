@@ -7,19 +7,14 @@ export class DataService {
   getNavMenuItems(): Array<any> {
     return [
       {
+        route: "login",
+        iconName: "face",
+        name: "Login"
+      },
+      {
         route: "dashboard",
         iconName: "dashboard",
         name: "Dashboard"
-      },
-      {
-        route: "inputs",
-        iconName: "stars",
-        name: "Inputs"
-      },
-      {
-        route: "dialogs",
-        iconName: "face",
-        name: "Dialogs"
       }
     ];
   }

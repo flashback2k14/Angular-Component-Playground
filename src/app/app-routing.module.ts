@@ -1,35 +1,36 @@
 import { NgModule } from "@angular/core";
 import { Routes, RouterModule } from "@angular/router";
-import { YeahDashboardComponent, YeahInputsComponent } from "./routes";
-import { SharedModule } from "./shared/shared.module";
 
 const appRoutes: Routes = [
   {
-    path: "dashboard",
-    component: YeahDashboardComponent
+    path: "login",
+    loadChildren: "app/pages/login/login.module#LoginModule"
   },
   {
-    path: "inputs",
-    component: YeahInputsComponent
+    path: "dashboard",
+    loadChildren: "app/pages/dashboard/dashboard.module#DashboardModule"
   },
   // {
-  //   path: "dialogs",
-  //   component: YeahDialogsComponent
+  //   path: "profile",
+  //   loadChildren: "app/profile/profile.module#ProfileModule"
+  // },
+  // {
+  //   path: "favorite",
+  //   loadChildren: "app/favorite/favorite.module#FavoriteModule"
   // },
   {
     path: "",
-    redirectTo: "dashboard",
+    redirectTo: "login",
     pathMatch: "full"
   },
   {
     path: "**",
-    redirectTo: "dashboard"
+    redirectTo: "login"
   }
 ];
 
 @NgModule({
-  declarations: [YeahDashboardComponent, YeahInputsComponent],
-  imports: [RouterModule.forRoot(appRoutes), SharedModule],
-  exports: [RouterModule, SharedModule]
+  imports: [RouterModule.forRoot(appRoutes)],
+  exports: [RouterModule]
 })
 export class AppRoutingModule {}
