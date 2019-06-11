@@ -7,6 +7,6 @@ import { YeahTextareaComponent } from "./component/yeah-textarea.component";
 @NgModule({
   declarations: [YeahTextareaComponent],
   imports: [CommonModule, FormsModule],
-  exports: [YeahTextareaComponent]
+  exports: [CommonModule, FormsModule, YeahTextareaComponent]
 })
 export class YeahTextareaModule {}

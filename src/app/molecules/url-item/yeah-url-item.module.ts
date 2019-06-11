@@ -1,4 +1,5 @@
 import { NgModule } from "@angular/core";
+import { CommonModule } from "@angular/common";
 
 import { YeahLinkModule } from "../../atoms/link/yeah-link.module";
 import { YeahTagListModule } from "../../atoms/tag-list/yeah-tag-list.module";
@@ -12,6 +13,7 @@ import { YeahUrlItemComponent } from "./component/yeah-url-item.component";
 @NgModule({
   declarations: [YeahUrlItemComponent],
   imports: [
+    CommonModule,
     YeahLinkModule,
     YeahTagListModule,
     YeahTagItemModule,
@@ -19,6 +21,6 @@ import { YeahUrlItemComponent } from "./component/yeah-url-item.component";
     YeahButtonModule,
     YeahTextareaModule
   ],
-  exports: [YeahUrlItemComponent]
+  exports: [CommonModule, YeahUrlItemComponent]
 })
 export class YeahUrlItemModule {}

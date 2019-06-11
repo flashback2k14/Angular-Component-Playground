@@ -7,6 +7,6 @@ import { YeahInputComponent } from "./component/yeah-input.component";
 @NgModule({
   declarations: [YeahInputComponent],
   imports: [CommonModule, FormsModule],
-  exports: [YeahInputComponent]
+  exports: [CommonModule, FormsModule, YeahInputComponent]
 })
 export class YeahInputModule {}

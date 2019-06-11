@@ -1,14 +1,17 @@
 import { NgModule } from "@angular/core";
 import { Routes, RouterModule } from "@angular/router";
 
+import { YeahLoginComponent } from "./pages/login/component/yeah-login.component";
+import { YeahDashboardComponent } from "./pages/dashboard/component/yeah-dashboard.component";
+
 const appRoutes: Routes = [
   {
     path: "login",
-    loadChildren: "app/pages/login/login.module#LoginModule"
+    component: YeahLoginComponent
   },
   {
     path: "dashboard",
-    loadChildren: "app/pages/dashboard/dashboard.module#DashboardModule"
+    component: YeahDashboardComponent
   },
   // {
   //   path: "profile",

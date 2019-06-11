@@ -6,6 +6,6 @@ import { YeahHeaderComponent } from "./component/yeah-header.component";
 @NgModule({
   declarations: [YeahHeaderComponent],
   imports: [RouterModule, CommonModule],
-  exports: [YeahHeaderComponent]
+  exports: [RouterModule, CommonModule, YeahHeaderComponent]
 })
 export class YeahHeaderModule {}
