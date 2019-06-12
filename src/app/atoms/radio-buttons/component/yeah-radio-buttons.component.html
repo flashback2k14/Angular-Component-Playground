@@ -1,1 +1,18 @@
-<div>radio button</div>
+<div class="container">
+  <div
+    *ngFor="let button of buttonItems"
+    class="md-radio md-radio-inline"
+    tabindex="{{ groupTabIndex }}"
+  >
+    <input
+      id="{{ button.id }}"
+      type="radio"
+      name="md-radio-group"
+      value="{{ button.value }}"
+      [checked]="button.isChecked"
+      (change)="onChange($event)"
+      (keyup)="onChange($event)"
+    />
+    <label for="{{ button.id }}">{{ button.text }}</label>
+  </div>
+</div>

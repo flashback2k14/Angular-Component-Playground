@@ -42,7 +42,7 @@ export class YeahTextareaComponent implements ControlValueAccessor {
     this._propagateChange = fn;
   }
 
-  private onChange(event) {
+  onChange(event: any) {
     this.inputValue = event.target.value;
     this._propagateChange(this.inputValue);
   }

@@ -19,6 +19,29 @@ export class DataService {
     ];
   }
 
+  getRadioButtonOptions(): Array<any> {
+    return [
+      {
+        id: "rb1",
+        text: "Option 1",
+        value: "op1",
+        isChecked: false
+      },
+      {
+        id: "rb2",
+        text: "Option 2",
+        value: "op2",
+        isChecked: false
+      },
+      {
+        id: "rb3",
+        text: "Option 3",
+        value: "op3",
+        isChecked: false
+      }
+    ];
+  }
+
   getUrls(): Array<any> {
     return [
       {
