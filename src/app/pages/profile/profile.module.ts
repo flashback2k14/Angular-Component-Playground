@@ -1,7 +1,7 @@
 import { NgModule } from "@angular/core";
 import { CommonModule } from "@angular/common";
 
-import { YeahTabsModule } from "../../molecules/tabs/yeah-tabs.module";
+import { YeahTabsModule } from "../../atoms/tabs/yeah-tabs.module";
 
 import { YeahProfileComponent } from "./component/yeah-profile.component";
 // import { ProfileRouterModule } from "./profile-routing.module";

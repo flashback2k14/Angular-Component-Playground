@@ -1,11 +1,11 @@
 import { Component, Output, EventEmitter } from "@angular/core";
 
 @Component({
-  selector: "yeah-footer",
-  templateUrl: "./yeah-footer.component.html",
-  styleUrls: ["./yeah-footer.component.css"]
+  selector: "yeah-bottom-bar",
+  templateUrl: "./yeah-bottom-bar.component.html",
+  styleUrls: ["./yeah-bottom-bar.component.css"]
 })
-export class YeahFooterComponent {
+export class YeahBottomBarComponent {
   @Output() addNewItem: EventEmitter<void>;
 
   constructor() {

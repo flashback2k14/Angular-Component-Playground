@@ -29,6 +29,10 @@ export class YeahDashboardComponent {
     this._showAlert($event);
   }
 
+  handleAddNewItem(): void {
+    this._showAlert({ msg: "Add new Item" });
+  }
+
   private _showAlert(value: any): void {
     alert(JSON.stringify(value, null, 2));
   }

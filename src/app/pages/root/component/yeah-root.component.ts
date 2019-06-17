@@ -1,5 +1,5 @@
 import { Component } from "@angular/core";
-import { DataService } from "../services/data.service";
+import { DataService } from "../../../services/data.service";
 
 @Component({
   selector: "yeah-root",
@@ -11,18 +11,5 @@ export class YeahRootComponent {
 
   constructor(private _dataService: DataService) {
     this.navMenuItems = this._dataService.getNavMenuItems();
-  }
-
-  submit($event: any): void {
-    this._showAlert($event);
-  }
-
-  handleAddNewItem(): void {
-    // TODO: call Rx.JS UI-Service like UiService
-    this._showAlert({ msg: "Add new Item" });
-  }
-
-  private _showAlert(value: any): void {
-    alert(JSON.stringify(value, null, 2));
   }
 }

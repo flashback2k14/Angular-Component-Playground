@@ -1,9 +1,9 @@
 import { NgModule } from "@angular/core";
 import { Routes, RouterModule } from "@angular/router";
 
-import { YeahLoginComponent } from "./pages/login/component/yeah-login.component";
-import { YeahDashboardComponent } from "./pages/dashboard/component/yeah-dashboard.component";
-import { YeahProfileComponent } from "./pages/profile/component/yeah-profile.component";
+import { YeahLoginComponent } from "../login/component/yeah-login.component";
+import { YeahDashboardComponent } from "../dashboard/component/yeah-dashboard.component";
+import { YeahProfileComponent } from "../profile/component/yeah-profile.component";
 
 const appRoutes: Routes = [
   {
@@ -37,4 +37,4 @@ const appRoutes: Routes = [
   imports: [RouterModule.forRoot(appRoutes)],
   exports: [RouterModule]
 })
-export class AppRoutingModule {}
+export class YeahRootRoutingModule {}
