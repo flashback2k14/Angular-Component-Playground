@@ -17,6 +17,11 @@ export class DataService {
         name: "Dashboard"
       },
       {
+        route: "favorites",
+        iconName: "favorite_border",
+        name: "Favorites"
+      },
+      {
         route: "profile",
         iconName: "person",
         name: "Profile"

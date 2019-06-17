@@ -6,6 +6,7 @@ import { YeahHeaderModule } from "../../atoms/header/yeah-header.module";
 import { LoginModule } from "../login/login.module";
 import { DashboardModule } from "../dashboard/dashboard.module";
 import { ProfileModule } from "../profile/profile.module";
+import { FavoritesModule } from "../favorites/favorites.module";
 
 import { YeahRootComponent } from "./component/yeah-root.component";
 
@@ -17,7 +18,8 @@ import { YeahRootComponent } from "./component/yeah-root.component";
     YeahHeaderModule,
     LoginModule,
     DashboardModule,
-    ProfileModule
+    ProfileModule,
+    FavoritesModule
   ],
   bootstrap: [YeahRootComponent]
 })
