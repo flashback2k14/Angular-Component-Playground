@@ -1,4 +1,10 @@
-import { Component, Input, forwardRef } from "@angular/core";
+import {
+  Component,
+  Input,
+  forwardRef,
+  Output,
+  EventEmitter
+} from "@angular/core";
 import { ControlValueAccessor, NG_VALUE_ACCESSOR } from "@angular/forms";
 
 @Component({
@@ -16,7 +22,12 @@ import { ControlValueAccessor, NG_VALUE_ACCESSOR } from "@angular/forms";
 export class YeahRadioButtonsComponent implements ControlValueAccessor {
   @Input() groupTabIndex: string;
   @Input() buttonItems: Array<any>;
+  @Output() optionChanged: EventEmitter<string>;
   inputValue: string;
+
+  constructor() {
+    this.optionChanged = new EventEmitter<string>();
+  }
 
   private _propagateChange = (_: any) => {};
 
@@ -32,6 +43,7 @@ export class YeahRadioButtonsComponent implements ControlValueAccessor {
   onChange(event: any) {
     this.inputValue = event.target.value;
     this._propagateChange(this.inputValue);
+    this.optionChanged.emit(this.inputValue);
   }
 
   registerOnTouched(fn: any): void {}

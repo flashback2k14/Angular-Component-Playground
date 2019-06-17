@@ -15,6 +15,11 @@ export class DataService {
         route: "dashboard",
         iconName: "dashboard",
         name: "Dashboard"
+      },
+      {
+        route: "profile",
+        iconName: "person",
+        name: "Profile"
       }
     ];
   }

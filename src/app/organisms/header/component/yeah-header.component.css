@@ -23,8 +23,12 @@ a {
 .header li a {
   display: flex;
   align-items: center;
-  padding: 20px 20px;
+  padding: 20px 10px;
   text-decoration: none;
+}
+
+.header li:last-of-type {
+  padding-right: 20px;
 }
 
 .header li a span:hover,
@@ -58,6 +62,7 @@ a {
   padding: 28px 20px;
   position: relative;
   user-select: none;
+  margin-top: 2px;
 }
 
 .header .menu-icon .navicon {
@@ -128,7 +133,7 @@ a {
   .header li a {
     display: flex;
     align-items: center;
-    padding: 20px 30px;
+    /* padding: 20px 30px; */
   }
   .header .menu {
     clear: none;

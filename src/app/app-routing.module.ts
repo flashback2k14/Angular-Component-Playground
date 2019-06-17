@@ -3,6 +3,7 @@ import { Routes, RouterModule } from "@angular/router";
 
 import { YeahLoginComponent } from "./pages/login/component/yeah-login.component";
 import { YeahDashboardComponent } from "./pages/dashboard/component/yeah-dashboard.component";
+import { YeahProfileComponent } from "./pages/profile/component/yeah-profile.component";
 
 const appRoutes: Routes = [
   {
@@ -13,10 +14,10 @@ const appRoutes: Routes = [
     path: "dashboard",
     component: YeahDashboardComponent
   },
-  // {
-  //   path: "profile",
-  //   loadChildren: "app/profile/profile.module#ProfileModule"
-  // },
+  {
+    path: "profile",
+    component: YeahProfileComponent
+  },
   // {
   //   path: "favorite",
   //   loadChildren: "app/favorite/favorite.module#FavoriteModule"
